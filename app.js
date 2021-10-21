@@ -5,7 +5,7 @@ var logger = require("morgan");
 var mongoose = require("mongoose");
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
-
+require('dotenv').config()
 var app = express();
 
 app.use(logger("dev"));
