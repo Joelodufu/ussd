@@ -34,7 +34,11 @@ router.post("/", (req, res) => {
         "CON You are about to Deposit the sum N10,000 to UBA: Zainab Balogun Obialor\n Enter Depositor's name to proceed or press '0' to Decline ";
     } else if (array.length === 4) {
       //Save the Account details to database
-      if (parseInt(array[3]) === 1) {
+
+      //get the depositor name
+      let accountName = array[3]
+      if (parseInt(array[3]) !=0) {
+        
         let user = new User();
         user.harrawayPin = array[0];
         user.accountNumber = array[1];
@@ -47,7 +51,7 @@ router.post("/", (req, res) => {
       }
 
       //Decline Deposit
-      else if (parseInt(array[3]) === 2) {
+      else if (parseInt(array[3]) === 0) {
         response = "END Deposit Declined!!!";
       }
 
