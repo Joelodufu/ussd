@@ -31,7 +31,7 @@ router.post("/", (req, res) => {
     //Having The Account Name
     else if (array.length === 3) {
       response =
-        "CON You are about to Deposit the sum N10,000 to UBA: Zainab Balogun Obialor\n Enter Depositor's name to proceed or press '0' to Decline ";
+        "CON You are about to Deposit the sum N10,000 to UBA: Zainab Balogun Obialor\n1. Enter Depositor's name to proceed\n2. Decline ";
     } else if (array.length === 4) {
       //Save the Account details to database
       if (parseInt(array[3]) === 1) {
