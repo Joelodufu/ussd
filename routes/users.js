@@ -23,15 +23,15 @@ router.post("/", (req, res) => {
     console.log(array);
     if (array.length === 1) {
       //Voucher Code
-      response = "CON Enter Account Number";
+      response = "CON Please Enter your Cashcard PIN";
     } else if (array.length === 2) {
       //Having The Account Number
-      response = "CON Enter The Account Name";
+      response = "CON Please Enter your 10 digits account number";
     }
     //Having The Account Name
     else if (array.length === 3) {
       response =
-        "CON Please Confirm Deposit\n1. Deposit\2. Decline\3. View Transactions";
+        "CON Please Confirm Deposit\n1. Deposit\n2. Decline\n3. View Transactions";
     } else if (array.length === 4) {
       //Save the Account details to database
       if (parseInt(array[3]) === 1) {
