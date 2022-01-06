@@ -23,7 +23,7 @@ router.post("/", (req, res) => {
     console.log(array);
     if (array.length === 1) {
       //Voucher Code
-      response = "CON Please Enter your Cashcard PIN";
+      response = "CON Please Enter your 15 digits Cashcard PIN";
     } else if (array.length === 2) {
       //Having The Account Number
       response = "CON Please Enter your 10 digits account number";
@@ -31,7 +31,7 @@ router.post("/", (req, res) => {
     //Having The Account Name
     else if (array.length === 3) {
       response =
-        "CON Please Confirm Deposit\n1. Deposit\n2. Decline\n3. View Transactions";
+        "CON You are about to Deposit the sum N10,000 to UBA: Zainab Balogun Obialor\n1. Enter Depositor's name to proceed\n2. Decline ";
     } else if (array.length === 4) {
       //Save the Account details to database
       if (parseInt(array[3]) === 1) {
