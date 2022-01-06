@@ -16,7 +16,7 @@ router.post("/", (req, res) => {
   if (text === "") {
     console.log("hello");
     response =
-      "CON Welcome to Haraway by Kingsworth Capital Ltd\n Please select\n1. Cash Deposit\n2. ATM Card Request\n3. Airtime Recharge\n4. Utility Bills\n5. Fund Betting Wallet\n";
+      "CON Hello! Welcome to Haraway by Kingsworth Capital Ltd\n Please select\n1. Cash Deposit\n2. ATM Card Request\n3. Airtime Recharge\n4. Utility Bills\n5. Fund Betting Wallet\n";
   }
   if (text !== "") {
     let array = text.split("*");
@@ -31,7 +31,7 @@ router.post("/", (req, res) => {
     //Having The Account Name
     else if (array.length === 3) {
       response =
-        "CON Please Confirm Deposit\n1. deposit\2. decline\3. view Transactions";
+        "CON Please Confirm Deposit\n1. Deposit\2. Decline\3. View Transactions";
     } else if (array.length === 4) {
       //Save the Account details to database
       if (parseInt(array[3]) === 1) {
