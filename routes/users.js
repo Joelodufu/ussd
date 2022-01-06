@@ -16,7 +16,7 @@ router.post("/", (req, res) => {
   if (text === "") {
     console.log("hello");
     response =
-      "CON Welcome to Haraway by Kingsworth Capital Ltd\n Please enter the 15 Digits Haraways CashCard PIN";
+      "CON Welcome to Haraway by Kingsworth Capital Ltd\n Please select\n1. Cash Deposit\n2. ATM Card Request\n3. Airtime Recharge\n4. Utility Bills\n5. Fund Betting Wallet\n";
   }
   if (text !== "") {
     let array = text.split("*");
