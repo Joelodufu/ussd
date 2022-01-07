@@ -22,19 +22,20 @@ router.post("/", (req, res) => {
     let array = text.split("*");
     console.log(array);
 
+
+
+
     //FOR DEPOSIT
-    
+    if(parseInt(array[0]===1)){
+
+      
     if (array.length === 1) {
       //Voucher Code
-      if(parseInt(array[0])===1){
-        response = "CON Please Enter your 15 digits Cashcard PIN";
-        if (array.length === 2) {
-          //Having The Account 
-          //select specific service
-        
-          response = "CON Please Enter your 10 digits account number";
-        }
-         
+      response = "CON Please Enter your 15 digits Cashcard PIN";
+    } else if (array.length === 2) {
+      //Having The Account Number
+      response = "CON Please Enter your 10 digits account number";
+    }
     //Having The Account Name
     else if (array.length === 3) {
       response =
@@ -76,12 +77,49 @@ router.post("/", (req, res) => {
           response = "END Current Transactions";
         });
       }
-      }
-      
-    } else{
-      response = "END Current Transactions";
     }
     }
+
+
+
+
+    //FOR ATM
+    if(parseInt(array[0])===2){
+
+      response = "END Thank you for applying for ATM";
+    }
+
+
+
+
+
+    //FOR AIRTIME RECHARGE
+    if(parseInt(array[0])==3){
+      response = "END tHANK YOU FOR BY=UYING RECHARGE CARD";
+
+    }
+
+
+
+
+
+    //FOR UTILITY BILLS
+    if(parseInt(array[0]===4)){
+
+      response = "END THANKS FOR PAYING YOUR BILLS";
+
+    }
+
+
+
+
+    //FOR FUNDING OF BET WALLET
+    if(parseInt(array[0]===5)){
+      response = "END THANKS OMOH GAMBLER... WELDONE SIR!!!";
+
+
+    }
+    
   }
   setTimeout(() => {
     res.send(response);
