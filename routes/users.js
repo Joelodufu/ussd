@@ -21,13 +21,20 @@ router.post("/", (req, res) => {
   if (text !== "") {
     let array = text.split("*");
     console.log(array);
+
+    //FOR DEPOSIT
+    
     if (array.length === 1) {
       //Voucher Code
-      response = "CON Please Enter your 15 digits Cashcard PIN";
-    } else if (array.length === 2) {
-      //Having The Account Number
-      response = "CON Please Enter your 10 digits account number";
-    }
+      if(parseInt(array[0])===1){
+        response = "CON Please Enter your 15 digits Cashcard PIN";
+        if (array.length === 2) {
+          //Having The Account 
+          //select specific service
+        
+          response = "CON Please Enter your 10 digits account number";
+        }
+         
     //Having The Account Name
     else if (array.length === 3) {
       response =
@@ -69,6 +76,11 @@ router.post("/", (req, res) => {
           response = "END Current Transactions";
         });
       }
+      }
+      
+    } else{
+      response = "END Current Transactions";
+    }
     }
   }
   setTimeout(() => {
