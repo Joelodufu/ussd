@@ -81,12 +81,14 @@ router.post("/", (req, res) => {
         response="CON Select Card Type\n1. Master Card\n2. Visa Card\n3. Verve Card"
       }else if(array.length===3){
         response="CON Enter your Full name as to be reflected on the Card"
-      }else if(array.length===4){
-        response="CON Enter your BVN"
+      }else if (array.length===4){
+        response="CON Please enter your Account number"
       }else if(array.length===5){
+        response="CON Enter your BVN"
+      }else if(array.length===6){
         response="CON Please confirm request\n Select\n1. to Continue\n2. to decline"
       }
-      else{
+      else if(array.length===7){
         response="END Your request  for ATM Card have been place succesfully\n Wait for pick-up message in 24 hours from now"
       }
     }
