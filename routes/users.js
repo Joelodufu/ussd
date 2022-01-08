@@ -22,7 +22,7 @@ router.post("/", (req, res) => {
     console.log(array);
 
     //FOR DEPOSIT
-    if (parseInt(array[0] === 1)) {
+    if (parseInt(array[0]) === 1) {
       if (array.length === 1) {
         //Voucher Code
         response = "CON Please Enter your 15 digits Cashcard PIN";
