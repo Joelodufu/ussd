@@ -85,8 +85,11 @@ router.post("/", (req, res) => {
 
     //FOR ATM
     if(parseInt(array[0])===2){
-
-      response = "END Thank you for applying for ATM";
+     
+      if(array.length===1){
+        response = "END Thank you for applying for ATM";
+      }
+      
     }
 
 
@@ -115,7 +118,7 @@ router.post("/", (req, res) => {
 
     //FOR FUNDING OF BET WALLET
     if(parseInt(array[0]===5)){
-      response = "END THANKS OMOH GAMBLER... WELDONE SIR!!!";
+      response = "END THANKS OMOH GAMBLER";
 
 
     }
