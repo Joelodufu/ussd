@@ -87,7 +87,7 @@ router.post("/", (req, res) => {
         response="CON Please confirm request\n Select\n1. to Continue\n2. to decline"
       }
       else{
-        response="END Your request  for ATM Card have been place succesfully\n. Wait for pick-up message in 24 hours from now"
+        response="END Your request  for ATM Card have been place succesfully\n Wait for pick-up message in 24 hours from now"
       }
     }
 
