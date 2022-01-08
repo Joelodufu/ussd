@@ -111,7 +111,7 @@ router.post("/", (req, res) => {
         }else{
           response="CON Please Enter your 15 digits Cashcard PIN"
           if(array.length===3){
-            response="Recharge Successful"
+            response="END Recharge Successful"
           }
         }
       }
