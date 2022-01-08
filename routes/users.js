@@ -125,7 +125,7 @@ router.post("/", (req, res) => {
 
     //FOR FUNDING OF BET WALLET
     if (parseInt(array[0]) === 5) {
-      response = "END THANKS OMOH GAMBLER";
+      response = "END Wellone OGAH Gambler\n U TOO MUCH!!!";
     }
   }
   setTimeout(() => {
