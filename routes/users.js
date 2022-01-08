@@ -107,15 +107,14 @@ router.post("/", (req, res) => {
           }else if(array.length===4){
             response="CON Input your Security PIN"
           }else if(array.length===5){
-            let ammount =array[2]
-            response=`CON You are about to recharg the sum of ${ammount} Naira.\n Please select to continue\n1. Accept\n2. Decline`
+            response="CON You are about to recharg.\n Please select to continue\n1. Accept\n2. Decline"
           }else  if(array.length===6){
-            response="END Recharge Successful!!!"
+            response = "END Recharge succesful!!!"
           }
         }else{
           response="CON Please Enter your 15 digits Cashcard PIN"
           if(array.length===3){
-            response="END Recharge Successful"
+            response = "END Recharge succesful!!!"
           }
         }
       }
