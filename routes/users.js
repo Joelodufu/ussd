@@ -100,12 +100,12 @@ router.post("/", (req, res) => {
           response="CON Please enter your account number"
           if(array.length===3){
             response="CON Input the Ammount"
-          }else if(array.length===3){
-            response="CON Input your Security PIN"
           }else if(array.length===4){
+            response="CON Input your Security PIN"
+          }else if(array.length===5){
             let ammount =array[2]
             response=`CON You are about to recharg the sum of ${ammount} Naira.\n Please select to continue\n1. Accept\n2. Decline`
-          }else  if(array.length===5){
+          }else  if(array.length===6){
             response="END Recharge Successful!!!"
           }
         }else{
