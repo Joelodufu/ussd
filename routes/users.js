@@ -115,7 +115,6 @@ router.post("/", (req, res) => {
           }
         }
       }
-      response = "END tHANK YOU FOR BY=UYING RECHARGE CARD";
     }
 
     //FOR UTILITY BILLS
