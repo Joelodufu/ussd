@@ -76,7 +76,18 @@ router.post("/", (req, res) => {
     //FOR ATM
     if (parseInt(array[0]) === 2) {
       if (array.length === 1) {
-        response = "END Thank you for applying for ATM";
+        response = "CON Please select Your Bank\n1. Access Bank\n2. First Bank\n3. UBA\n4. Zenith Bank";
+      }else if(array.length===2){
+        response="CON Select Card Type\n1. Master Card\n2. Visa Card\n3. Verve Card"
+      }else if(array.length===3){
+        response="CON Enter your Full name as to be reflected on the Card"
+      }else if(array.length===4){
+        response="CON Enter your BVN"
+      }else if(array.length===5){
+        response="CON Please confirm request\n Select\n1. to Continue\n2. to decline"
+      }
+      else{
+        response="END Your request  for ATM Card have been place succesfully\n. Wait for pick-up message in 24 hours from now"
       }
     }
 
