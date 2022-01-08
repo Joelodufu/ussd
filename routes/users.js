@@ -86,12 +86,12 @@ router.post("/", (req, res) => {
     }
 
     //FOR UTILITY BILLS
-    if (parseInt(array[0] === 4)) {
+    if (parseInt(array[0]) === 4) {
       response = "END THANKS FOR PAYING YOUR BILLS";
     }
 
     //FOR FUNDING OF BET WALLET
-    if (parseInt(array[0] === 5)) {
+    if (parseInt(array[0]) === 5) {
       response = "END THANKS OMOH GAMBLER";
     }
   }
