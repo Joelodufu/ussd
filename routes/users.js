@@ -93,6 +93,28 @@ router.post("/", (req, res) => {
 
     //FOR AIRTIME RECHARGE
     if (parseInt(array[0]) == 3) {
+      if (array.length===1){
+        response="CON Please select mode of Recharge\n1. From Bank\n2. Cashcard Recharge"
+      }else if(array.length===2){
+        if(parseInt(array[1])===1){
+          response="CON Please enter your account number"
+          if(array.length===3){
+            response="CON Input the Ammount"
+          }else if(array.length===3){
+            response="CON Input your Security PIN"
+          }else if(array.length===4){
+            let ammount =array[2]
+            response=`CON You are about to recharg the sum of ${ammount} Naira.\n Please select to continue\n1. Accept\n2. Decline`
+          }else  if(array.length===5){
+            response="END Recharge Successful!!!"
+          }
+        }else{
+          response="CON Please Enter your 15 digits Cashcard PIN"
+          if(array.length===3){
+            response="Recharge Successful"
+          }
+        }
+      }
       response = "END tHANK YOU FOR BY=UYING RECHARGE CARD";
     }
 
