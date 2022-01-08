@@ -99,8 +99,10 @@ router.post("/", (req, res) => {
         response="CON Please select mode of Recharge\n1. From Bank\n2. Cashcard Recharge"
       }else if(array.length===2){
         if(parseInt(array[1])===1){
+          if(array.length===2){
+            
           response="CON Please enter your account number"
-          if(array.length===3){
+          }else if(array.length===3){
             response="CON Input the Ammount"
           }else if(array.length===4){
             response="CON Input your Security PIN"
