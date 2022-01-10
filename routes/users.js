@@ -99,7 +99,6 @@ router.post("/", (req, res) => {
         response="CON Please select mode of Recharge\n1. From Bank\n2. Cashcard Recharge"
       }else if(array.length===2){
         if(parseInt(array[1])===1){
-
           // if(array.length===2){
           // response="CON Please enter your account number"
           // }else if(array.length===3){
@@ -111,29 +110,16 @@ router.post("/", (req, res) => {
           // }else  if(array.length===6){
           //   response = "END Recharge succesful!!!"
           // }
-          if (array.length === 2) {
-            response = "CON Please select Your Bank\n1. Access Bank\n2. First Bank\n3. UBA\n4. Zenith Bank";
-          }else if(array.length===3){
-            response="CON Select Card Type\n1. Master Card\n2. Visa Card\n3. Verve Card"
-          }else if(array.length===4){
-            response="CON Enter your Full name as to be reflected on the Card"
-          }else if (array.length===5){
-            response="CON Please enter your Account number"
-          }else if(array.length===6){
-            response="CON Enter your BVN"
-          }else if(array.length===7){
-            response="CON Please confirm request\n Select\n1. to Continue\n2. to decline"
-          }
-          else if(array.length===8){
-            response="END Your request  for ATM Card have been place succesfully\n Wait for pick-up message in 24 hours from now"
-          }
-          
+
+          response="END you have recharged ussing bank"
         }else if (parseInt(array[1])==2){
-          if (array.length===2){
-            response="CON Please Enter your 15 digits Cashcard PIN"
-          }else if(array.length===3){
-            response = "END Recharge Successful";
-          }
+          // if (array.length===2){
+          //   response="CON Please Enter your 15 digits Cashcard PIN"
+          // }else if(array.length===3){
+          //   response = "END Recharge Successful";
+          // }
+
+          response="END You have recharged using Carshpin"
         }else{
           response='END please insert the right option'
         }
