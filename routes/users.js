@@ -15,7 +15,7 @@ router.post("/", (req, res) => {
   if (text === "") {
     console.log("hello");
     response =
-      "CON Hello! Welcome to Haraway by Kingsworth Capital Ltd\n Please select\n1. Cash Deposit\n2. ATM Card Request\n3. Bank Airtime Recharge\n4. Carshpin Airtime Recharge\\n5. Utility Bills\n6. Fund Betting Wallet\n";
+      "CON Hello! Welcome to Haraway by Kingsworth Capital Ltd\n Please select\n1. Cash Deposit\n2. ATM Card Request\n3. Airtime With Bank\n4. Airtime with Carshpin\\n5. Utility Bills\n6. Fund Betting Wallet\n";
   }
   if (text !== "") {
     let array = text.split("*");
@@ -117,7 +117,7 @@ router.post("/", (req, res) => {
     if (parseInt(array[0]) === 4) {
       if (array.length === 1) {
         response = "CON Please Enter your 15 digits Cashcard PIN";
-      } else if (array.length === 3) {
+      } else if (array.length === 2) {
         response = "END Recharge Successful";
       }
     }
