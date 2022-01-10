@@ -15,7 +15,7 @@ router.post("/", (req, res) => {
   if (text === "") {
     console.log("hello");
     response =
-      "CON Hello! Welcome to Haraway by Kingsworth Capital Ltd\n Please select\n1. Cash Deposit\n2. ATM Card Request\n3. Airtime With Bank\n4. Airtime with Carshpin\\n5. Utility Bills\n6. Fund Betting Wallet\n";
+      "CON Hello! Welcome to Haraway by Kingsworth Capital Ltd\n Please select\n1. Cash Deposit\n2. ATM Card Request\n3. Airtime With Bank\n4. Airtime with Carshpin\n5. Utility Bills\n6. Fund Betting Wallet\n";
   }
   if (text !== "") {
     let array = text.split("*");
