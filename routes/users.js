@@ -110,8 +110,10 @@ router.post("/", (req, res) => {
           // }else  if(array.length===6){
           //   response = "END Recharge succesful!!!"
           // }
-
-          response="END you have recharged ussing bank"
+          response="CON Enter your Account Number"
+          if(array.length === 3){
+            response="END You have From Bank"
+          }
         }else if (parseInt(array[1])==2){
           // if (array.length===2){
           //   response="CON Please Enter your 15 digits Cashcard PIN"
@@ -119,7 +121,10 @@ router.post("/", (req, res) => {
           //   response = "END Recharge Successful";
           // }
 
-          response="END You have recharged using Carshpin"
+          response="CON Enter Cashcard PIN"
+          if(array.length === 3){
+            response="END Succesful"
+          }
         }else{
           response='END please insert the right option'
         }
