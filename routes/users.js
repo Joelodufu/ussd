@@ -26,50 +26,6 @@ router.post("/", (req, res) => {
       if (array.length === 1) {
         //Voucher Code
         response = "CON Please Enter your 15 digits Cashcard PIN";
-      } else if (array.length === 2) {
-        //Having The Account Number
-        response = "CON Please Enter your 10 digits account number";
-      }
-      //Having The Account Name
-      else if (array.length === 3) {
-        response =
-          "CON You are about to Deposit the sum N10,000 to UBA: Zainab Balogun Obialor\n Enter Depositor's name to proceed or press '0' to Decline ";
-      } else if (array.length === 4) {
-        //Save the Account details to database
-
-        //get the depositor name
-        let accountName = array[3];
-        if (parseInt(array[3]) != 0) {
-          let user = new User();
-          user.harrawayPin = array[0];
-          user.accountNumber = array[1];
-          user.accountName = array[2];
-
-          user.save((user) => {
-            console.log(user);
-            response = "END Fund Deposited succesfully";
-          });
-        }
-
-        //Decline Deposit
-        else if (parseInt(array[3]) === 0) {
-          response = "END Deposit Declined!!!";
-        }
-
-        //View Transactions
-        else if (parseInt(array[3]) === 3) {
-          User.find({}, (err, user) => {
-            console.log(user);
-            let users_data = `${
-              users.length
-                ? `No Users Found`
-                : `${users.map((items, index) => {
-                    return `${index + 1}. ${items.accountName}\n`;
-                  })}`
-            }`;
-            response = "END Current Transactions";
-          });
-        }
       }
     }
 
@@ -78,21 +34,6 @@ router.post("/", (req, res) => {
       if (array.length === 1) {
         response =
           "CON Please select Your Bank\n1. Access Bank\n2. First Bank\n3. UBA\n4. Zenith Bank";
-      } else if (array.length === 2) {
-        response =
-          "CON Select Card Type\n1. Master Card\n2. Visa Card\n3. Verve Card";
-      } else if (array.length === 3) {
-        response = "CON Enter your Full name as to be reflected on the Card";
-      } else if (array.length === 4) {
-        response = "CON Please enter your Account number";
-      } else if (array.length === 5) {
-        response = "CON Enter your BVN";
-      } else if (array.length === 6) {
-        response =
-          "CON Please confirm request\n Select\n1. to Continue\n2. to decline";
-      } else if (array.length === 7) {
-        response =
-          "END Your request  for ATM Card have been place succesfully\n Wait for pick-up message in 24 hours from now";
       }
     }
 
