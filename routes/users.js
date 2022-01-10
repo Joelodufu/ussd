@@ -15,7 +15,7 @@ router.post("/", (req, res) => {
   if (text === "") {
     console.log("hello");
     response =
-      "CON Hello! Welcome to Haraway by Kingsworth Capital Ltd\n Please select\n1. Cash Deposit\n2. ATM Card Request\n3. Airtime Recharge\n4. Utility Bills\n5. Fund Betting Wallet\n";
+      "CON Hello! Welcome to Haraway by Kingsworth Capital Ltd\n Please select\n1. Cash Deposit\n2. ATM Card Request\n3. Bank Airtime Recharge\n4. Carshpin Airtime Recharge\\n5. Utility Bills\n6. Fund Betting Wallet\n";
   }
   if (text !== "") {
     let array = text.split("*");
@@ -76,68 +76,59 @@ router.post("/", (req, res) => {
     //FOR ATM
     if (parseInt(array[0]) === 2) {
       if (array.length === 1) {
-        response = "CON Please select Your Bank\n1. Access Bank\n2. First Bank\n3. UBA\n4. Zenith Bank";
-      }else if(array.length===2){
-        response="CON Select Card Type\n1. Master Card\n2. Visa Card\n3. Verve Card"
-      }else if(array.length===3){
-        response="CON Enter your Full name as to be reflected on the Card"
-      }else if (array.length===4){
-        response="CON Please enter your Account number"
-      }else if(array.length===5){
-        response="CON Enter your BVN"
-      }else if(array.length===6){
-        response="CON Please confirm request\n Select\n1. to Continue\n2. to decline"
-      }
-      else if(array.length===7){
-        response="END Your request  for ATM Card have been place succesfully\n Wait for pick-up message in 24 hours from now"
+        response =
+          "CON Please select Your Bank\n1. Access Bank\n2. First Bank\n3. UBA\n4. Zenith Bank";
+      } else if (array.length === 2) {
+        response =
+          "CON Select Card Type\n1. Master Card\n2. Visa Card\n3. Verve Card";
+      } else if (array.length === 3) {
+        response = "CON Enter your Full name as to be reflected on the Card";
+      } else if (array.length === 4) {
+        response = "CON Please enter your Account number";
+      } else if (array.length === 5) {
+        response = "CON Enter your BVN";
+      } else if (array.length === 6) {
+        response =
+          "CON Please confirm request\n Select\n1. to Continue\n2. to decline";
+      } else if (array.length === 7) {
+        response =
+          "END Your request  for ATM Card have been place succesfully\n Wait for pick-up message in 24 hours from now";
       }
     }
 
-    //FOR AIRTIME RECHARGE
-    if (parseInt(array[0]) == 3) {
-      if (array.length===1){
-        response="CON Please select mode of Recharge\n1. From Bank\n2. Cashcard Recharge"
-      }else if(array.length===2){
-        if(parseInt(array[1])===1){
-          // if(array.length===2){
-          // response="CON Please enter your account number"
-          // }else if(array.length===3){
-          //   response="CON Input the Ammount"
-          // }else if(array.length===4){
-          //   response="CON Input your Security PIN"
-          // }else if(array.length===5){
-          //   response="CON You are about to recharg.\n Please select to continue\n1. Accept\n2. Decline"
-          // }else  if(array.length===6){
-          //   response = "END Recharge succesful!!!"
-          // }
-          response="CON Enter your Account Number"
-          if(array.length === 3){
-            response="END You have From Bank"
-          }
-        }else if (parseInt(array[1])==2){
-          // if (array.length===2){
-          //   response="CON Please Enter your 15 digits Cashcard PIN"
-          // }else if(array.length===3){
-          //   response = "END Recharge Successful";
-          // }
+    //FOR BANK AIRTIME RECHARGE
+    if (parseInt(array[0]) ===3) {
+      if (array.length === 1) {
+        response = "CON Please enter your account number";
+      } else if (array.length === 2) {
+        response = "CON Input the Ammount";
+      } else if (array.length === 3) {
+        response = "CON Input your Security PIN";
+      } else if (array.length === 4) {
+        response =
+          "CON You are about to recharg.\n Please select to continue\n1. Accept\n2. Decline";
+      } else if (array.length === 5) {
+        response = "END Recharge succesful!!!";
+      }
+    }
 
-          response="CON Enter Cashcard PIN"
-          if(array.length === 3){
-            response="END Succesful"
-          }
-        }else{
-          response='END please insert the right option'
-        }
+    //CASHPIN AIRTIME
+
+    if (parseInt(array[0]) === 4) {
+      if (array.length === 1) {
+        response = "CON Please Enter your 15 digits Cashcard PIN";
+      } else if (array.length === 3) {
+        response = "END Recharge Successful";
       }
     }
 
     //FOR UTILITY BILLS
-    if (parseInt(array[0]) === 4) {
+    if (parseInt(array[0]) === 5) {
       response = "END THANKS FOR PAYING YOUR BILLS";
     }
 
     //FOR FUNDING OF BET WALLET
-    if (parseInt(array[0]) === 5) {
+    if (parseInt(array[0]) === 6) {
       response = "END Wellone OGAH Gambler\n U TOO MUCH!!!";
     }
   }
