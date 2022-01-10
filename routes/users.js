@@ -36,7 +36,19 @@ router.post("/", (req, res) => {
           "CON You are about to Deposit the sum N10,000 to UBA: Zainab Balogun Obialor\n Enter Depositor's name to proceed or press '0' to Decline ";
       } else if (array.length === 4) {
         //Save the Account details to database
-        response = "END Fund Deposited succesfully";
+
+        //get the depositor name
+        let accountName = array[3];
+        if (parseInt(array[3]) != 0) {
+          let user = new User();
+          user.harrawayPin = array[0];
+          user.accountNumber = array[1];
+          user.accountName = array[2];
+
+          user.save((user) => {
+            console.log(user);
+            response = "END Fund Deposited succesfully";
+          });
         }
 
         //Decline Deposit
